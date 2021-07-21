@@ -24,4 +24,4 @@ restart:
 	@docker-compose up --detach
 
 test:
-	@docker exec -it express python3 test.py
+	@pytest -v
