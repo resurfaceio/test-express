@@ -1,6 +1,6 @@
 // App Imports
-import models from "../models/index";
 import config from "../config/config.json";
+import models from "../models/index";
 
 // Sync database tables and start server
 export default function (server) {

@@ -7,7 +7,7 @@ import {
 } from "graphql";
 
 const NewsType = new GraphQLObjectType({
-  name: "news",
+  name: "newsobject",
   description: "...",
 
   fields: () => ({
@@ -19,6 +19,14 @@ const NewsType = new GraphQLObjectType({
   }),
 });
 
+const newsObjectType = new GraphQLObjectType({
+  name: "news",
+  description: "...",
+  fields: () => ({
+    news: { type: NewsType },
+  }),
+});
+
 const okType = new GraphQLObjectType({
   name: "ok",
   description: "...",
@@ -27,4 +35,4 @@ const okType = new GraphQLObjectType({
     ok: { type: GraphQLBoolean },
   }),
 });
-export { NewsType, okType };
+export { NewsType, newsObjectType, okType };

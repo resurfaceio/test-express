@@ -3,7 +3,8 @@ import models from "../../models";
 
 // Get news by ID
 export async function getById(parentValue, { id }) {
-  return await models.News.findOne({ where: { id } });
+  const data = await models.News.findOne({ where: { id } });
+  return { news: data };
 }
 
 // Get all news
@@ -13,7 +14,7 @@ export async function getAll() {
 
 // Create news
 export async function create(parentValue, { title, body }) {
-  return await models.News.create({ title, body });
+  return { news: await models.News.create({ title, body }) };
 }
 
 // Delete news

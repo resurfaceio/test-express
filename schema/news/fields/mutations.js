@@ -2,11 +2,11 @@
 import { GraphQLString } from "graphql";
 import { create, remove } from "../resolvers";
 // App Imports
-import { NewsType, okType } from "../type";
+import { newsObjectType, okType } from "../type";
 
 // News create
 export const addNews = {
-  type: NewsType,
+  type: newsObjectType,
   args: {
     title: {
       name: "title",
