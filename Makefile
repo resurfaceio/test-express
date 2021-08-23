@@ -17,11 +17,10 @@ logs:
 	@docker logs -f express
 
 ping:
-	@curl 'http://localhost/' -H 'Content-Type: application/json' --data-binary '{"message":"hi!"}'
+	# @curl 'http://localhost/' -H 'Content-Type: application/json' --data-binary '{"message":"hi!"}'
+	@curl "http://localhost/ping"
 
 restart:
 	@docker-compose stop
 	@docker-compose up --detach
 
-test:
-	@docker exec -it express python3 test.py
